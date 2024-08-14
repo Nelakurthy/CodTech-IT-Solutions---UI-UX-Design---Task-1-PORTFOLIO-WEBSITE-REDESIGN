@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Solid background color */
+            color: #222325;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 10px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .section {
+            padding: 40px;
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .home-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .home-text {
+            max-width: 600px;
+        }
+
+        .home-summary {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .summary-section {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 250px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .summary-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .summary-section p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .summary-section button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .summary-section button:hover {
+            background-color: #45a049;
+        }
+
+        /* Skills Section */
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            font-size: 1.2em;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .skills-list li .stars {
+            margin-left: 10px;
+            color: #FFD700;
+        }
+
+        /* Tools & Technologies Section */
+        .tools-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .tools-list li {
+            font-size: 1.2em;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .tools-list li .stars {
+            margin-left: 10px;
+            color: #FFD700;
+        }
+
+        /* Certificates Section */
+        .certificate-item {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .certificate-item img {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Projects Section */
+        .project-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-item img {
+            max-width: 250px;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        .project-item h3 {
+            margin-top: 10px;
+        }
+
+        .project-item p {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .project-item button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .project-item button:hover {
+            background-color: #45a049;
+        }
+
+        /* About Me Section */
+        .about-me {
+            font-size: 1.1em;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-info a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        Portfolio
+    </div>
+
+    <section id="home" class="section active">
+        <div class="home-content" style="justify-content: flex-start; text-align: center;">
+            <img src="images1.jpg" alt="Student Photo" class="photo" style="margin-right: 40px;">
+            <div class="home-text" style="text-align: left;">
+                <h1>Welcome to My Portfolio</h1>
+                <h1>I'm N.Saptharshi Reddy</h1>
+                <h2>Student at KITS Warangal</h2>
+                <p>Explore my projects, skills, and internships. I am passionate about IoT, AI, ML, full-stack development, front end development and UI/UX. Dive into my work and see how I can contribute to solving real-world problems.</p>
+            </div>
+        </div>
+        <div class="home-summary">
+            <div class="summary-section">
+                <h2>Skills</h2>
+                <p>Java, Python, HTML, CSS, JavaScript, AIML, IoT, Image Processing, Data Science, MongoDB...</p>
+                <button onclick="showSection('skills')">Learn More</button>
+            </div>
+            <div class="summary-section">
+                <h2>Projects</h2>
+                <p>Animal Intrusion Detection System, Smart Water Quality Monitoring System, Age & Gender Based BMI Tracker...</p>
+                <button onclick="showSection('projects')">View Projects</button>
+            </div>
+            <div class="summary-section">
+                <h2>Certificates</h2>
+                <p>Bharat Intern, CodeChef, Code Alpha, Power BI, HackerRank Problem Solving...</p>
+                <button onclick="showSection('certificates')">View Certificates</button>
+            </div>
+            <div class="summary-section">
+                <h2>About Me</h2>
+                <p>I'm a passionate student pursuing my degree in CSE-IoT at KITS Warangal, focusing on AI/ML, IoT, and full-stack development. My academic journey has equipped me with a solid foundation in these areas, and I am eager to apply my skills to real-world challenges. In addition to my academic pursuits, I enjoy working on personal projects that involve cutting-edge technologies and innovative solutions.</p>
+                <div class="contact-info">
+                    <p>Email: <a href="mailto:saptharshinelakurthi@gmail.com">saptharshinelakurthi@gmail.com</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/nelakurthi-saptharshi-reddy-715240265" target="_blank">linkedin.com/in/nelakurthi-saptharshi-reddy-715240265</a></p>
+                    <p>GitHub: <a href="https://github.com/Nelakurthy" target="_blank">github.com/Nelakurthy</a></p>
+                    <p>Contact No: <a href="tel:+91 9949566349">+91 9949566349</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>My Skills</h2>
+        <div class="skills-section">
+            <h3>Core Skills</h3>
+            <ul class="skills-list">
+                <li>Java <span class="stars">★★★★☆</span></li>
+                <li>Python <span class="stars">★★★★★</span></li>
+                <li>HTML  <span class="stars">★★★★☆</span></li>
+                <li>CSS  <span class="stars">★★★★☆</span></li>
+                <li>JavaScript <span class="stars">★★★★☆</span></li>
+            </ul>
+            <h3>Tools & Technologies</h3>
+            <ul class="tools-list">
+                <li>Data Science <span class="stars">★★★★☆</span></li>
+                <li>Machine Learning <span class="stars">★★★★☆</span></li>
+                <li>IoT <span class="stars">★★★☆☆</span></li>
+                <li>MongoDB <span class="stars">★★★★☆</span></li>
+                <li>Node.js <span class="stars">★★★☆☆</span></li>
+                <li>React.js <span class="stars">★★★☆☆</span></li>
+                <li>Flask <span class="stars">★★★☆☆</span></li>
+                <li>Power BI <span class="stars">★★★★☆</span></li>
+                <li>OpenCV <span class="stars">★★★☆☆</span></li>
+                <li>Tkinter <span class="stars">★★☆☆☆</span></li>
+            </ul>
+            <button onclick="showSection('home')">Back to Home</button>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>My Projects</h2>
+        <div class="project-item">
+            <img src="animal.jpg" alt="Project 1">
+            <h3>Animal Intrusion Detection System using Image Processing and ML</h3>
+            <p>The Animal Intrusion Detection System uses image processing and machine learning to monitor wildlife intrusions on farms. It aims to detect and classify animals through real-time camera feeds and send alerts for potential threats. Tools like OpenCV handle image processing, while TensorFlow or PyTorch are used for training the machine learning models. Technologies include CNNs for accurate recognition and IoT devices for effective monitoring and notification.</p>
+        </div>
+        <div class="project-item">
+            <img src="water.jpg" alt="Project 2">
+            <h3>Smart Water Quality Monitoring System</h3>
+            <p>The Smart Water Quality Monitoring System is designed to continuously assess water quality using IoT sensors. Its primary objective is to measure parameters such as pH, temperature, and turbidity in real-time, ensuring safe and clean water. The system employs sensors integrated with an Arduino microcontroller to collect data, which is then analyzed and displayed using cloud computing. Technologies utilized include pH sensors, temperature sensors, turbidity sensors, and data visualization tools for effective monitoring and management.</p>
+        </div>
+        <div class="project-item">
+            <img src="bmi.jpg" alt="Project 3">
+            <h3>Age & Gender Based BMI Tracker wth Nutrition Plan</h3>
+            <p>The Age & Gender-Based BMI Tracker with Nutrition Plan is a web development project that calculates BMI and provides personalized nutrition plans based on user inputs, using HTML, CSS, JavaScript, and backend frameworks for data processing and user management.</p>
+        </div>
+        <div class="project-item">
+            <img src="farmer.jpg" alt="Project 4">
+            <h3>Crop recommendation System using ML and App Development</h3>
+            <p>The Crop Recommendation System utilizes machine learning to recommend crops based on factors like soil quality, climate, and historical data. It aids farmers in selecting suitable crops for their land, enhancing yield and productivity. Technologies used include data collection tools, ML models, and user-friendly app development frameworks.</p>
+        </div>
+        <div class="project-item">
+            <img src="retail.png" alt="Project 5">
+            <h3>Online Retail recommendation System using Data Science</h3>
+            <p>The Online Retail Recommendation System uses data science to offer personalized product recommendations based on user browsing history, purchase behavior, and preferences. It enhances the shopping experience by suggesting relevant items, increasing user engagement and sales. The system integrates data processing tools, recommendation algorithms, and web development frameworks.</p>
+        </div>
+        <div class="project-item">
+            <img src="login page.jpg" alt="Project 6">
+            <h3>Desi Dazzle Online Women's Fashion Ecommerce Website</h3>
+            <p>Desi Dazzle Online Women's Fashion E-commerce Website is a web development project aimed at providing a seamless shopping experience for women's fashion. It features product browsing, shopping cart, and user account management. Technologies used include HTML, CSS, JavaScript, and backend frameworks.</p>
+        </div>
+        <div class="project-item">
+            <img src="money.jpg" alt="Project 7">
+            <h3>Money Tracker Web app with Full Stack Development</h3>
+            <p>The Money Tracker Web App is a comprehensive financial management tool that tracks income, expenses, and savings, offering features like budget planning, expense categorization, and financial reporting. It uses frontend technologies like Node.js , HTML, CSS, and JavaScript, backend frameworks, and databases like mongodb for data management and storage.</p>
+        </div>
+        <div class="project-item">
+            <img src="gpt.png" alt="Project 8">
+            <h3>Text Generation with GPT-2 using AI</h3>
+            <p>The Text Generation with GPT-2 project uses artificial intelligence to create context-aware text for content creation, chatbots, and automated writing. The model is trained on large datasets using natural language processing frameworks, Python, and libraries like TensorFlow or PyTorch for model training and deployment.</p>
+        </div>
+        <button onclick="showSection('home')">Back to Home</button>
+    </section>
+
+    <section id="certificates" class="section">
+        <h2>Certificates</h2>
+        <div class="certificate-item">
+            <img src="Bharat Intern.jpg" alt="Certificate 1">
+        </div>
+        <div class="certificate-item">
+            <img src="codechef.jpg" alt="Certificate 2">
+        </div>
+        <div class="certificate-item">
+            <img src="code alpha certificate.png" alt="Certificate 3">
+        </div>
+        <div class="certificate-item">
+            <img src="powerbi.jpg" alt="Certificate 4">
+        </div>
+        <div class="certificate-item">
+            <img src="Hackerrank problem solving.png" alt="Certificate 5">
+        </div>
+        <div class="certificate-item">
+            <img src="Hackerrank python.png" alt="Certificate 6">
+        </div>
+        <div class="certificate-item">
+            <img src="codtech.png" alt="Certificate 7">
+        </div>
+        <button onclick="showSection('home')">Back to Home</button>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
